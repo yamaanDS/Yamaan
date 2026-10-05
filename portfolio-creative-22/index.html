@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfolio</title>
+<meta name="description" content="Industrial & Production Engineering student — supply chain, operations and logistics portfolio." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("fx");</script>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+<nav class="rail" id="rail" aria-label="Page sections"></nav>
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 48 48" aria-hidden="true"><circle class="ring-bg" cx="24" cy="24" r="20"/><circle class="ring-fg" id="toTopRing" cx="24" cy="24" r="20"/><path class="arrow" d="M24 31V17M17 23l7-7 7 7"/></svg>
+</button>
+
+<!-- ============ NAV ============ -->
+<nav class="navbar">
+  <div class="wrap">
+    <a href="#home" class="brand">
+      <span class="mark js-initials">YN</span>
+      <span class="js-name">Your Name</span>
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#activities">Activities</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#recognition">Recognition</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"></button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+  <a href="#activities">Activities</a>
+  <a href="#skills">Skills</a>
+  <a href="#work">Work</a>
+  <a href="#recognition">Recognition</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="hero">
+  <div class="wrap hero-wrap">
+    <div class="hero-copy">
+      <div class="flow-node" data-n="01"><span>Open to Supply Chain, Operations & Logistics roles</span></div>
+      <h1 class="js-name hero-name">Your Name</h1>
+      <div class="role js-role">Role loads from data.js</div>
+      <p class="tagline js-tagline">Intro text loads from data.js</p>
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-primary">See the work</a>
+        <a class="btn btn-outline js-cv-link" href="#" target="_blank" rel="noopener">Download CV</a>
+      </div>
+      <div class="hero-social js-social"></div>
+    </div>
+    <div class="hero-figure" id="heroFigure">
+      <div class="hero-orbit" id="heroOrbit" aria-hidden="true"></div>
+      <div class="hero-gears" id="heroGears" aria-hidden="true"></div>
+      <div class="hero-photo-block">
+        <div class="frame reg-frame js-photo"></div>
+      </div>
+      <div class="hero-tag mono">
+        <span class="js-hero-dept">Dept.</span>
+        <span class="js-hero-univ">University</span>
+      </div>
+    </div>
+  </div>
+  <div class="wrap"><div class="hero-stats reveal" id="heroStats"></div></div>
+</section>
+
+<!-- ============ CONVEYOR BELT (decorative skills ticker) ============ -->
+<div class="belt" id="belt" aria-hidden="true">
+  <div class="belt-tape"></div>
+  <div class="belt-lane" id="beltLane1"><div class="belt-track"></div><div class="belt-rail"></div></div>
+  <div class="belt-lane rev slim" id="beltLane2"><div class="belt-track"></div><div class="belt-rail"></div></div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap">
+    <div class="flow-node" data-n="02"><span>About</span></div>
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <div class="frame reg-frame js-photo"></div>
+      </div>
+      <div class="about-copy reveal">
+        <h2>What I'm working on</h2>
+        <div class="about-bio" id="aboutBio"></div>
+
+        <div class="about-block">
+          <h4>Interests</h4>
+          <div class="tag-row" id="academicInterestTags"></div>
+        </div>
+        <div class="about-block">
+          <h4>Where I'm headed</h4>
+          <p id="aboutGoals" class="about-goals"></p>
+        </div>
+        <p class="philosophy" id="aboutPhilosophy"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience">
+  <div class="wrap">
+    <div class="flow-node" data-n="03"><span>Experience</span></div>
+    <div class="section-head reveal">
+      <h2>Work experience</h2>
+      <p class="sub">Where I've put the theory into practice.</p>
+    </div>
+    <div class="timeline" id="experienceTimeline"></div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section id="education">
+  <div class="wrap">
+    <div class="flow-node" data-n="04"><span>Education</span></div>
+    <div class="section-head reveal">
+      <h2>Education</h2>
+      <p class="sub">Degrees, coursework, and institutions.</p>
+    </div>
+    <div class="timeline" id="educationTimeline"></div>
+  </div>
+</section>
+
+<!-- ============ ACTIVITIES ============ -->
+<section id="activities">
+  <div class="wrap">
+    <div class="flow-node" data-n="05"><span>Activities</span></div>
+    <div class="section-head reveal">
+      <h2>Leadership & campus activities</h2>
+      <p class="sub">Scroll to move through them.</p>
+    </div>
+    <div class="activity-showcase">
+      <div class="activity-list" id="activityList"></div>
+      <div class="activity-sticky">
+        <div class="activity-photo-frame reg-frame" id="activityPhotoFrame"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+  <div class="wrap">
+    <div class="flow-node" data-n="06"><span>Skills</span></div>
+    <div class="section-head reveal">
+      <h2>Skills</h2>
+      <p class="sub">Tap a skill to see the projects that used it.</p>
+    </div>
+    <div class="skills-grid" id="skillsGrid"></div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="work">
+  <div class="wrap">
+    <div class="flow-node" data-n="07"><span>Work</span></div>
+    <div class="section-head reveal">
+      <h2>Project portfolio</h2>
+      <p class="sub">Filter by category, or open one for the full write-up.</p>
+    </div>
+    <div class="filter-row" id="projectFilters"></div>
+    <div class="card-grid" id="projectGrid"></div>
+  </div>
+</section>
+
+<!-- ============ RECOGNITION (achievements + certifications) ============ -->
+<section id="recognition">
+  <div class="wrap">
+    <div class="flow-node" data-n="08"><span>Recognition</span></div>
+    <div class="section-head reveal">
+      <h2>Achievements & certifications</h2>
+    </div>
+    <div class="simple-grid" id="achievementGrid"></div>
+    <div class="simple-grid" id="certGrid" style="margin-top:16px;"></div>
+  </div>
+</section>
+
+<!-- ============ RESUME ============ -->
+<section id="resume">
+  <div class="wrap">
+    <div class="flow-node" data-n="09"><span>Resume</span></div>
+    <div class="section-head reveal">
+      <h2>Resume</h2>
+      <p class="sub">A summarized view — download the full CV as a PDF below.</p>
+    </div>
+    <div class="resume-grid">
+      <div class="resume-col"><h4>Education</h4><div id="resumeEducation"></div></div>
+      <div class="resume-col"><h4>Experience</h4><div id="resumeExperience"></div></div>
+      <div class="resume-col"><h4>Projects</h4><div id="resumeProjects"></div></div>
+      <div class="resume-col"><h4>Activities</h4><div id="resumeActivities"></div></div>
+      <div class="resume-col"><h4>Skills</h4><div id="resumeSkills"></div></div>
+    </div>
+    <div class="resume-download">
+      <a class="btn btn-primary js-cv-link" href="#" target="_blank" rel="noopener">Download CV (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="flow-node" data-n="10"><span>Contact</span></div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <h2>Let's talk</h2>
+        <p class="contact-intro">
+          Open to entry-level Supply Chain, Operations, or Logistics roles, and to research collaboration.
+        </p>
+        <div class="contact-links" id="contactLinksList"></div>
+      </div>
+      <form class="reveal" id="contactForm">
+        <div class="form-grid">
+          <div class="field"><label for="cf-name">Name</label><input id="cf-name" type="text" required /></div>
+          <div class="field"><label for="cf-email">Email</label><input id="cf-email" type="email" required /></div>
+          <div class="field full"><label for="cf-subject">Subject</label><input id="cf-subject" type="text" /></div>
+          <div class="field full"><label for="cf-message">Message</label><textarea id="cf-message" required></textarea></div>
+        </div>
+        <button class="btn btn-primary" type="submit" style="margin-top:20px;">Send message</button>
+        <div class="form-status" id="formStatus"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-name js-name">Your Name</div>
+        <div class="footer-dept js-dept">Industrial & Production Engineering</div>
+        <div class="footer-dept js-university">Rajshahi University of Engineering & Technology</div>
+      </div>
+      <div class="footer-social js-social"></div>
+    </div>
+    <div class="copyright">
+      <span>&copy; <span class="js-year"></span> <span class="js-name">Your Name</span>. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/fx.js"></script>
+</body>
+</html>
